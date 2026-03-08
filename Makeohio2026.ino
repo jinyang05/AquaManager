@@ -109,7 +109,7 @@ void setup(){
 
   
   // get motor ready
-  if (true) {
+  if (waterIsClean) {
     motor.step(steps_degree);
     // water is clean and can be reused to clean
   } else if(waterIsCold) {
@@ -138,7 +138,7 @@ void loop(){
   delay(5000);
 
   // reset motor back
-  if (true) {
+  if (waterIsClean) {
     motor.step(-steps_degree);
     // water is clean and can be reused to clean
   } else if(waterIsCold) {
